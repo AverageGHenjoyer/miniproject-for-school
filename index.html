@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6a385f4482.js" crossorigin="anonymous"></script>
+</head>
+<body> <!--Strona ta do prezentowania się w pełnej okazałości
+        wymaga dostępu do internetu ze względu na czcionkę i obrazy.-->
+    <main>
+        <nav id="navbar">
+            <ul> <!-- Lista z kilkoma elementami li -->
+                <li><a href="#intro-section">Strona główna</a></li>
+                <li><a href="#about-section">O mnie</a></li>
+                <li><a href="#skills-section">Umiejętności</a></li>
+                <li><a href="#contact-section">Kontakt</a></li>
+                
+            </ul>
+        </nav>
+        <section id="intro-section">
+
+        </section>
+        <section id="welcome-section">
+            <div class="message">
+                <p>Witam <br><b>na mojej stronie!</b></p>
+            </div>
+            <div class="message">
+                <img src="https://us.123rf.com/450wm/dolgachov/dolgachov1608/dolgachov160807215/61677729-business-technology-education-and-people-concept-happy-young-creative-man-or-student-with-computer-a.jpg?ver=6" alt="powitanie">
+            </div>
+        </section>
+        <section id="about-section">
+            <h1 class="section-heading">Coś o mnie</h1>
+            <div class="about-container">
+                <div class="message my-image">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/29/08/55/work-1627703__340.jpg" alt="programista">
+                </div>
+                <div class="message my-information">
+                    <!--Kilka paragrafów-->
+                    <p>Tu Maciek</p>
+                    <p>Ta strona jest na <br><i class="fa-solid fa-hand-point-right"></i> aplikacje internetowe <i class="fa-solid fa-hand-point-left"></i></p>
+                    <p>Tutaj muszę jeszcze coś dopisać, może jakaś funkcja Javascript</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills-section">
+            <h1 class="section-heading">Moje umiejętności</h1>
+            <div id="container-skill">
+                <div class="skill-information">
+                    <p> <i class="fa-solid fa-database fa-3x"></i></p>
+                    <p class="skill-name">SQL</p>
+                    <p> <progress value="70" max="100" /></p>
+                </div>
+                    <div class="skill-information">
+                    <p> <i class="fab fa-html5 fa-3x"></i></p>
+                    <p class="skill-name">HTML5</p>
+                    <p> <progress value="60" max="100" /></p>
+                </div>
+                    <div class="skill-information">
+                    <p> <i class="fab fa-css3 fa-3x"></i></p>
+                    <p class="skill-name">CSS</p>
+                    <p> <progress value="60" max="100" /></p>
+                </div>
+                    <div class="skill-information">
+                    <p> <i class="fab fa-js fa-3x"></i></p>
+                    <p class="skill-name">Javascript</p>
+                    <p> <progress value="50" max="100" /></p>
+                </div>
+                    <div class="skill-information">
+                    <p> <i class="fab fa-python fa-3x"></i></p>
+                    <p class="skill-name">Python</p>
+                    <p> <progress value="45" max="100" /></p>
+                </div>
+            </div>
+        </section>
+
+        <!--Prosty formularz-->
+        <section id="contact-section"> 
+
+            <h1 class="contact-heading">Kontakt</h1> <!-- Nagłówek -->
+            <div class="contact-container">
+
+                <form action="" method="post" id="contact-form">
+                    <p><label for="username">Nazwa użytkownika: </label>
+                    <input name="username" type="text" id="username" minlength="4" maxlength="25" required></p>
+                    <p><label for="email">Twój adres email: </label>
+                    <input name="email" id="email" type="email" required></p>
+                    <p><label for="text">Twoja wiadomość: </label>
+                    <textarea name="text" id="text" rows="8" cols="50" required></textarea></p>
+                    <p>
+                        <button type="submit" form="contact-form">Wyślij</button>
+                        <button type="reset">Reset</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        //getElementByID() querySelector() getElementByClassName() getElementByTagName() querySelectorAll()
+        console.log("getElementByID")
+        let id = document.getElementById("contact-form");
+        console.log(id);
+        console.log("querySelector")
+        let qS = document.querySelector("h1");
+        console.log(qS);
+        console.log("getElementsByClassName")
+        let getByClassName = document.getElementsByClassName("message");
+        console.log(getByClassName);
+        console.log("getElementsByTagName")
+        let getByTagName = document.getElementsByTagName("section");
+        console.log(getByTagName);
+        console.log("querySelectorAll")
+        let queryselect = document.querySelectorAll("section:not(#intro-section)")
+        console.log(queryselect)
+
+        //parentNode previousSibling/nextSibling firstChild/lastChild
+    </script>
+</body>
+</html>
