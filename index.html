@@ -4,18 +4,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Witaj Świecie!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6a385f4482.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+#logo{
+    padding-left: 10px;
+    padding-top: 4px;
+    position: absolute;
+}
+#navbar{
+    margin: 0;
+    padding: 5px 0px;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(243, 227, 198);
+    box-shadow: 0 10px 10px -5px rgba(243, 227, 198,0.5);
+}
+#navbar ul{
+    display: flex;
+    margin: 10px 0px 10px auto;
+    width: 55%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+#navbar ul li a{
+    margin-left: 3px;
+    color: black;
+    opacity: 0.7;
+    font-size: 1.2rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: rgba(65, 66, 66, 0.651);
+    opacity: 1;
+    text-decoration: underline;
+    transition: all 0.1ms;
+    transform: translatex(5px);
+}
+#intro-section{
+    height: 200px;
+    background-image: url(https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_960_720.jpg);
+    background-size: cover;
+}
+#welcome-section{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+hr {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 40%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(139, 139, 139, 0.308), rgba(255, 255, 255, 0));
+}
+.message{
+    display: flex;
+    margin: 20px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.message img{
+    max-width: 100%;
+}
+section:not(#intro-section){
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+.section-heading{
+    font-size: 2rem;
+    text-align: center;
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+}
+div.my-information{
+    display: block;
+    font-size: 1.5rem;
+    text-align: left;
+}
+#skills-section{
+    background-color: black;
+    color: white;
+}
+#container-skill{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+
+}
+.skill-information{
+    padding: 2rem;
+    text-align: center;
+}
+.skill-information:hover{
+    transform: translateY(-5px);
+}
+.skill-name{
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.skill-information progress{
+    background-color: white;
+    border: 1px solid white;
+}
+.skill-information progress::-webkit-progress-value{
+    background-color: white;
+    border-radius: 0;
+}
+.skill-information progress::-webkit-progress-bar{
+    background-color: black;
+}
+
+.contact-container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.contact-heading{
+    text-align: center;
+}
+button[type="submit"], button[type="reset"] {
+    cursor: pointer;
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+    color: white;
+  }
+button[type="submit"]:hover, button[type="reset"]:hover{
+    box-shadow: rgba(100, 57, 57, 0.5) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+input, textarea{
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+    </style>
 </head>
 <body> <!--Strona ta do prezentowania się w pełnej okazałości
         wymaga dostępu do internetu ze względu na czcionkę i obrazy.-->
     <main>
         <nav id="navbar">
+            <a href="#intro-section"><img id="logo" height="40px" src="https://cdn.pixabay.com/photo/2015/11/26/16/28/vintage-1064142_960_720.png"></a>
             <ul> <!-- Lista z kilkoma elementami li -->
+                
                 <li><a href="#intro-section">Strona główna</a></li>
                 <li><a href="#about-section">O mnie</a></li>
                 <li><a href="#skills-section">Umiejętności</a></li>
@@ -34,6 +201,7 @@
                 <img src="https://us.123rf.com/450wm/dolgachov/dolgachov1608/dolgachov160807215/61677729-business-technology-education-and-people-concept-happy-young-creative-man-or-student-with-computer-a.jpg?ver=6" alt="powitanie">
             </div>
         </section>
+        <hr>
         <section id="about-section">
             <h1 class="section-heading">Coś o mnie</h1>
             <div class="about-container">
@@ -44,7 +212,13 @@
                     <!--Kilka paragrafów-->
                     <p>Tu Maciek</p>
                     <p>Ta strona jest na <br><i class="fa-solid fa-hand-point-right"></i> aplikacje internetowe <i class="fa-solid fa-hand-point-left"></i></p>
-                    <p>Tutaj muszę jeszcze coś dopisać, może jakaś funkcja Javascript</p>
+                    <p id="text">Witaj świecie!</p>
+                    <script>
+                        
+                            document.getElementById("text").onclick=function(){
+                            document.getElementById("text").innerHTML = "¡Hola amigo!"
+                        }
+                    </script>
                 </div>
             </div>
         </section>
@@ -85,16 +259,52 @@
             <h1 class="contact-heading">Kontakt</h1> <!-- Nagłówek -->
             <div class="contact-container">
 
-                <form action="" method="post" id="contact-form">
-                    <p><label for="username">Nazwa użytkownika: </label>
-                    <input name="username" type="text" id="username" minlength="4" maxlength="25" required></p>
-                    <p><label for="email">Twój adres email: </label>
-                    <input name="email" id="email" type="email" required></p>
-                    <p><label for="text">Twoja wiadomość: </label>
-                    <textarea name="text" id="text" rows="8" cols="50" required></textarea></p>
+                <form id="contact-form" onsubmit="myButton.disabled = true; return true;">
                     <p>
-                        <button type="submit" form="contact-form">Wyślij</button>
-                        <button type="reset">Reset</button>
+                    <label 
+                    for="username">Nazwa użytkownika: </label>
+                    <input 
+                    name="username" 
+                    type="text" 
+                    id="username" 
+                    minlength="4" 
+                    maxlength="25" 
+                    placeholder="Podaj swoją nazwę użytkownika"
+                    required>
+                    </p>
+
+                    <p>
+                    <label 
+                    for="email">
+                    Twój adres email: 
+                    </label>
+
+                    <input 
+                    name="email" 
+                    id="email" 
+                    type="email" 
+                    placeholder="Podaj swój adres email"
+                    required>
+                    </p>
+
+                    <p>
+                    <label 
+                    for="text">
+                    Twoja wiadomość: 
+                    </label>
+                    <textarea 
+                    name="text" 
+                    id="text" 
+                    rows="8" 
+                    cols="50" 
+                    placeholder="Napisz coś!"
+                    required>
+                    </textarea>
+                    </p>
+
+                    <p>
+                    <button type="submit">Wyślij</button>
+                    <button type="reset" name="myButton" value="Submit">Reset</button>
                     </p>
                 </form>
             </div>
@@ -118,7 +328,6 @@
         let queryselect = document.querySelectorAll("section:not(#intro-section)")
         console.log(queryselect)
 
-        //parentNode previousSibling/nextSibling firstChild/lastChild
     </script>
 </body>
 </html>
